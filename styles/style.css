@@ -6,8 +6,8 @@
 }
 
 * {
-  -webkit-box-sizing = border-box;
-  -moz-box-sizing = border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -108,7 +108,7 @@ body {
 /* intro */
 
 .landing {
-  background-image: url(./image/M2.jpg);
+  background-image: url(../image/landing.jpg);
   background-size: cover;
   height: calc(100vh - 64px);
   position: relative;
@@ -180,7 +180,7 @@ body {
 .service .service-content {
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
-  grid-gab: 30px;
+  grid-gap: 30px;
   margin-top: 100px;
 }
 .service .service-content .srv {
