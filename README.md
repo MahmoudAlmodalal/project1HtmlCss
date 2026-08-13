@@ -83,6 +83,12 @@ To adapt the site for a real studio or portfolio, update the content in `index.h
 
 The Journal lives in `journal/`. Its archive page is `journal/index.html`, while each article uses the same reading-page structure, including metadata, a feature image, long-form content, and a next-article link. Duplicate an existing article page to publish a new note, then update its title, description, date, reading time, content, imagery, and archive link.
 
+## Contact form
+
+The contact form in `index.html` uses [FormSubmit](https://formsubmit.co/) because GitHub Pages serves static files and does not provide a private server endpoint for sending email. The form uses FormSubmit’s AJAX endpoint through `scripts/contact.js`, while the HTML `action` remains available as a progressive-enhancement fallback.
+
+The first submission to the configured recipient may require a one-time confirmation from FormSubmit. After that confirmation, future enquiries will arrive at `mahmoudAlmoudalal@gmail.com`. The form includes browser-native required-field and email validation, a message minimum length, a hidden honeypot field, loading feedback, success feedback, an error fallback, and a direct `mailto:` alternative.
+
 ## License
 
 This project is released under the license included in the repository.

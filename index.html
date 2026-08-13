@@ -237,8 +237,35 @@
         <div class="container contact-inner">
           <p class="eyebrow">Have a good one?</p>
           <h2 id="contact-title">Let’s make it<br /><em>worth talking about.</em></h2>
-          <p class="contact-copy">Tell us what you’re building, where you’re stuck, or what you’re dreaming up.</p>
-          <a class="contact-email" href="mailto:mahmoudAlmoudalal@gmail.com">mahmoudAlmoudalal@gmail.com <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+          <p class="contact-copy">Tell us what you’re building, where you’re stuck, or what you’re dreaming up. We usually reply within one working day.</p>
+          <div class="contact-form-wrap">
+            <form class="contact-form" action="https://formsubmit.co/mahmoudAlmoudalal@gmail.com" method="POST" data-contact-form>
+              <input type="hidden" name="_subject" value="New project enquiry — Summit Creative Studio" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://mahmoudalmodalal.github.io/summit-creative-studio/#contact" />
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact-honeypot" />
+              <div class="contact-form-grid">
+                <label>
+                  <span>Your name</span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Jane Smith" minlength="2" required />
+                </label>
+                <label>
+                  <span>Email address</span>
+                  <input type="email" name="email" autocomplete="email" placeholder="jane@company.com" required />
+                </label>
+              </div>
+              <label>
+                <span>How can we help?</span>
+                <textarea name="message" rows="5" placeholder="Tell us a little about the project, timeline, and what you want to make possible." minlength="20" required></textarea>
+              </label>
+              <div class="contact-form-actions">
+                <button class="button-link contact-submit" type="submit">Send enquiry <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+                <p class="contact-form-status" data-form-status role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+          <div class="contact-direct-line">Prefer email? <a class="contact-email" href="mailto:mahmoudAlmoudalal@gmail.com">mahmoudAlmoudalal@gmail.com <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></div>
           <div class="contact-footer">
             <span>Available for selected projects</span>
             <div class="social-links" aria-label="Social links">
@@ -260,5 +287,6 @@
         <a class="back-to-top" href="#top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
       </div>
     </footer>
+    <script src="scripts/contact.js" defer></script>
   </body>
 </html>
