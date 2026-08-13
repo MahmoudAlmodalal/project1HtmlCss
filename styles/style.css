@@ -2198,3 +2198,210 @@ a {
     width: 100%;
   }
 }
+
+/* Motion system */
+.site-header {
+  transition: background-color 260ms var(--ease-out), border-color 260ms var(--ease-out), box-shadow 260ms var(--ease-out), min-height 260ms var(--ease-out);
+}
+
+.site-header.is-scrolled {
+  border-color: rgba(244, 241, 235, 0.2);
+  background: rgba(14, 26, 27, 0.96);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+.site-header.is-scrolled .header-inner {
+  min-height: 66px;
+}
+
+.motion-enabled [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms var(--ease-out) var(--reveal-delay, 0ms), transform 700ms var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+.motion-enabled [data-reveal="left"] {
+  transform: translateX(-28px);
+}
+
+.motion-enabled [data-reveal="right"] {
+  transform: translateX(28px);
+}
+
+.motion-enabled [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.motion-enabled .hero-content {
+  animation: hero-content-in 1000ms var(--ease-out) both;
+}
+
+.motion-enabled .hero-note {
+  animation: hero-note-in 900ms var(--ease-out) 420ms both;
+}
+
+.motion-enabled .brand-mark {
+  animation: mark-settle 850ms var(--ease-out) 200ms both;
+}
+
+@keyframes hero-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-note-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mark-settle {
+  from {
+    opacity: 0;
+    transform: rotate(-32deg) scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-12deg) scale(1);
+  }
+}
+
+.hero h1 strong {
+  display: inline-block;
+  background: linear-gradient(100deg, var(--accent) 15%, #f1ff9d 48%, var(--accent) 82%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: accent-sheen 7s ease-in-out infinite;
+}
+
+@keyframes accent-sheen {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+.circle-link i,
+.hero-note span {
+  animation: float-down 2.4s ease-in-out infinite;
+}
+
+@keyframes float-down {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+.service-card,
+.project-card,
+.journal-teaser-featured,
+.journal-teaser-list article,
+.journal-archive-card,
+.case-study-results > div {
+  will-change: transform;
+}
+
+.service-card::before,
+.journal-teaser-list article::before,
+.case-study-results > div::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms var(--ease-out);
+}
+
+.service-card:hover::before,
+.journal-teaser-list article:hover::before,
+.case-study-results > div:hover::before {
+  transform: scaleX(1);
+}
+
+.journal-teaser-list article,
+.case-study-results > div {
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card:hover .project-info h3,
+.journal-archive-card:hover h2,
+.journal-teaser-featured:hover h3 {
+  color: var(--muted);
+}
+
+.journal-featured-image,
+.article-feature-image,
+.case-study-feature-image {
+  position: relative;
+}
+
+.journal-featured-image::after,
+.article-feature-image::after,
+.case-study-feature-image::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(244, 241, 235, 0.24);
+  content: "";
+  pointer-events: none;
+  transform: scale(0.97);
+  transition: transform 700ms var(--ease-out), border-color 700ms var(--ease-out);
+}
+
+.journal-featured-image:hover::after,
+.article-feature-image:hover::after,
+.case-study-feature-image:hover::after {
+  border-color: rgba(216, 255, 79, 0.72);
+  transform: scale(1);
+}
+
+.contact-form input:not([type="hidden"]),
+.contact-form textarea {
+  transition: border-color 180ms var(--ease-out), background-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out);
+}
+
+.contact-form label:focus-within > span {
+  color: var(--ink);
+  transform: translateX(3px);
+  transition: color 180ms var(--ease-out), transform 180ms var(--ease-out);
+}
+
+.contact-form label > span {
+  transition: color 180ms var(--ease-out), transform 180ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 strong,
+  .circle-link i,
+  .hero-note span {
+    animation: none;
+  }
+}
