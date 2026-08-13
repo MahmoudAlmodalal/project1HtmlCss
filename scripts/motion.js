@@ -51,6 +51,9 @@
     ".article-feature-image",
     ".article-layout > *",
     ".article-next-inner",
+    ".comments-inner",
+    ".comment-form",
+    ".comments-list-wrap",
   ];
 
   const targets = [...new Set(document.querySelectorAll(revealSelectors.join(",")))];

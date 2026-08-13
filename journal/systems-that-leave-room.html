@@ -45,9 +45,25 @@
         </div>
       </article>
 
+      <section class="comments-section" aria-labelledby="comments-title">
+        <div class="container comments-inner">
+          <div class="section-topline"><p class="eyebrow dark-eyebrow">Join the conversation</p><span class="section-index"><span data-comment-count>0</span> comments</span></div>
+          <div class="comments-grid">
+            <div class="comments-intro"><h2 id="comments-title">Leave a<br /><em>thought.</em></h2><p>Did this note spark an idea? Share a perspective or question. Comments are stored privately in this browser.</p></div>
+            <form class="comment-form" data-comment-form>
+              <label><span>Your name</span><input type="text" name="comment-name" placeholder="Your name" minlength="2" maxlength="40" required /></label>
+              <label><span>Your comment</span><textarea name="comment-body" rows="4" placeholder="Add a thoughtful note..." minlength="3" maxlength="500" required></textarea></label>
+              <div class="comment-form-actions"><button class="button-link" type="submit">Post comment <i class="fas fa-arrow-right" aria-hidden="true"></i></button><p class="comment-status" data-comment-status role="status" aria-live="polite"></p></div>
+            </form>
+          </div>
+          <div class="comments-list-wrap"><div class="comments-list-heading"><h3>Reader notes</h3><span>Be kind. Stay curious.</span></div><p class="comments-empty" data-comment-empty>No comments yet. Start the conversation.</p><div class="comments-list" data-comment-list></div></div>
+        </div>
+      </section>
+
       <section class="article-next"><div class="container article-next-inner"><p class="eyebrow dark-eyebrow">Continue reading</p><a href="the-case-for-a-point-of-view.html"><span>The case for a point of view in every project.</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></section>
     </main>
     <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="../index.html"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">Summit <em>Studio</em></span></a><p>© 2026 Summit Creative Studio. Built with intention.</p><a class="back-to-top" href="#article-top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
     <script src="../scripts/motion.js" defer></script>
+    <script src="../scripts/comments.js" defer></script>
   </body>
 </html>

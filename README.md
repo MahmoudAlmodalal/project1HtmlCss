@@ -89,6 +89,10 @@ The contact form in `index.html` uses [FormSubmit](https://formsubmit.co/) becau
 
 The first submission to the configured recipient may require a one-time confirmation from FormSubmit. After that confirmation, future enquiries will arrive at `mahmoudAlmoudalal@gmail.com`. The form includes browser-native required-field and email validation, a message minimum length, a hidden honeypot field, loading feedback, success feedback, an error fallback, and a direct `mailto:` alternative.
 
+## Journal comments
+
+Each Journal article includes an interactive comments area powered by `scripts/comments.js`. Visitors can add a name and comment, see the comment count update, remove comments from the same browser, and receive clear success or error feedback. Because the site is deployed on GitHub Pages without a database or server, comments are stored in the visitor’s local browser using `localStorage`; they are not shared between visitors or devices. A hosted database or comments provider can be connected later if public cross-device discussion is required.
+
 ## License
 
 This project is released under the license included in the repository.

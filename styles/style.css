@@ -2405,3 +2405,282 @@ a {
     animation: none;
   }
 }
+
+/* Journal comments */
+.comments-section {
+  padding-block: var(--section-space);
+  background: var(--paper-muted);
+}
+
+.comments-inner {
+  max-width: 1000px;
+}
+
+.comments-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(300px, 1.2fr);
+  align-items: start;
+  gap: clamp(2rem, 8vw, 8rem);
+  margin-top: 4rem;
+}
+
+.comments-intro h2 {
+  margin: 0 0 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.085em;
+  line-height: 0.92;
+}
+
+.comments-intro h2 em {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.comments-intro p {
+  max-width: 290px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.comment-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.comment-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.comment-form label > span {
+  color: var(--muted);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 180ms var(--ease-out), transform 180ms var(--ease-out);
+}
+
+.comment-form label:focus-within > span {
+  color: var(--ink);
+  transform: translateX(3px);
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 0.85rem 0.9rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), background-color 180ms var(--ease-out);
+}
+
+.comment-form textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+  color: rgba(14, 26, 27, 0.44);
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: var(--ink);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(14, 26, 27, 0.09);
+}
+
+.comment-form input:user-invalid,
+.comment-form textarea:user-invalid {
+  border-color: #9b3d30;
+}
+
+.comment-form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.comment-form-actions .button-link {
+  border-color: var(--ink);
+  cursor: pointer;
+}
+
+.comment-status {
+  min-height: 1.3rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.comment-status[data-state="success"] {
+  color: #245e3a;
+}
+
+.comment-status[data-state="error"] {
+  color: #9b3d30;
+}
+
+.comment-status[data-state="info"] {
+  color: var(--muted);
+}
+
+.comments-list-wrap {
+  margin-top: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--line);
+}
+
+.comments-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.comments-list-heading h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.comments-list-heading span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comments-empty {
+  margin: 0;
+  padding-block: 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.comments-empty[hidden] {
+  display: none;
+}
+
+.comments-list {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+}
+
+.comment-card {
+  padding: 1.3rem 1.25rem;
+  background: var(--paper-muted);
+}
+
+.comment-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.comment-avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  background: var(--accent);
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+}
+
+.comment-author strong,
+.comment-author time {
+  display: block;
+}
+
+.comment-author strong {
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.comment-author time {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.comment-card > p {
+  max-width: 680px;
+  margin: 1.1rem 0 0 2.7rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.comment-remove {
+  border: 0;
+  padding: 0.25rem;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.68rem;
+  transition: color 180ms var(--ease-out);
+}
+
+.comment-remove:hover,
+.comment-remove:focus-visible {
+  color: #9b3d30;
+}
+
+@media (max-width: 800px) {
+  .comments-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .comments-intro p {
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 520px) {
+  .comments-list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .comment-card-topline {
+    align-items: flex-start;
+  }
+
+  .comment-card > p {
+    margin-left: 0;
+  }
+}
