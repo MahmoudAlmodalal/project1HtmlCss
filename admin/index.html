@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Local admin panel for Summit Creative Studio Journal content and comments." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/Normalize.css" />
+    <link rel="stylesheet" href="../styles/all.min.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Admin Panel — Summit Creative Studio</title>
+  </head>
+  <body class="admin-page">
+    <header class="site-header admin-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Summit Creative Studio home"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">Summit <em>Studio</em></span></a>
+        <nav class="admin-nav" aria-label="Admin navigation"><a href="../journal/index.html">View Journal <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><span class="admin-session"><span class="admin-session-dot"></span> Local workspace</span></nav>
+      </div>
+    </header>
+
+    <main id="admin-top">
+      <section class="admin-hero">
+        <div class="container admin-hero-inner">
+          <p class="eyebrow"><span></span> Content operations</p>
+          <div class="admin-hero-row">
+            <div><h1>Journal<br /><em>control room.</em></h1><p>Review your articles, shape local drafts, and keep the reader conversation tidy.</p></div>
+            <div class="admin-hero-note"><span class="admin-hero-number">01</span><p>This is a browser-only workspace for the static GitHub Pages site.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-dashboard section">
+        <div class="container">
+          <div class="admin-stat-grid" aria-label="Journal overview">
+            <article class="admin-stat-card"><span>Articles</span><strong data-admin-article-count>0</strong><small>in the Journal index</small></article>
+            <article class="admin-stat-card"><span>Published</span><strong data-admin-published-count>0</strong><small>visible to readers</small></article>
+            <article class="admin-stat-card"><span>Comments</span><strong data-admin-comment-count>0</strong><small>stored on this device</small></article>
+          </div>
+
+          <div class="admin-section-heading"><div><p class="eyebrow dark-eyebrow">Editorial desk</p><h2>Manage articles</h2></div><button class="button-link admin-reset-button" type="button" data-reset-articles>Reset local edits <i class="fas fa-rotate-left" aria-hidden="true"></i></button></div>
+          <p class="admin-inline-status" data-admin-status role="status" aria-live="polite"></p>
+          <div class="admin-content-grid">
+            <div class="admin-article-list" data-admin-article-list></div>
+            <aside class="admin-editor-panel" aria-labelledby="editor-title">
+              <div class="admin-panel-topline"><span class="eyebrow dark-eyebrow">Article editor</span><span data-editor-state>Ready</span></div>
+              <h3 id="editor-title">Edit a note</h3>
+              <p class="admin-panel-copy">Update the local metadata shown on the Journal archive and article header.</p>
+              <form class="admin-article-form" data-admin-article-form>
+                <input type="hidden" name="slug" />
+                <label><span>Title</span><input type="text" name="title" maxlength="110" required /></label>
+                <label><span>Category</span><input type="text" name="category" maxlength="30" required /></label>
+                <div class="admin-form-row"><label><span>Read time</span><input type="text" name="readTime" maxlength="20" required /></label><label><span>Date</span><input type="text" name="date" maxlength="30" required /></label></div>
+                <label><span>Summary</span><textarea name="summary" rows="5" maxlength="240" required></textarea></label>
+                <label><span>Status</span><select name="status"><option value="published">Published</option><option value="draft">Draft</option></select></label>
+                <div class="admin-form-actions"><button class="button-link" type="submit">Save local edit <i class="fas fa-check" aria-hidden="true"></i></button><button class="admin-text-button" type="button" data-clear-article>Clear draft</button></div>
+              </form>
+            </aside>
+          </div>
+
+          <div class="admin-section-heading admin-comments-heading"><div><p class="eyebrow dark-eyebrow">Community desk</p><h2>Manage comments</h2></div><button class="admin-danger-button" type="button" data-clear-comments>Clear all comments</button></div>
+          <div class="admin-comment-toolbar"><p>Comments are grouped by article and live in this browser’s local storage.</p><select data-comment-filter aria-label="Filter comments by article"><option value="all">All articles</option></select></div>
+          <div class="admin-comments-list" data-admin-comments-list></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="../index.html"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">Summit <em>Studio</em></span></a><p>© 2026 Summit Creative Studio. Built with intention.</p><a class="back-to-top" href="#admin-top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
+    <script src="../scripts/article-data.js" defer></script>
+    <script src="../scripts/motion.js" defer></script>
+    <script src="admin.js" defer></script>
+  </body>
+</html>

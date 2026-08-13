@@ -54,6 +54,12 @@
     ".comments-inner",
     ".comment-form",
     ".comments-list-wrap",
+    ".admin-hero-inner",
+    ".admin-stat-card",
+    ".admin-section-heading",
+    ".admin-article-row",
+    ".admin-editor-panel",
+    ".admin-comment-card",
   ];
 
   const targets = [...new Set(document.querySelectorAll(revealSelectors.join(",")))];

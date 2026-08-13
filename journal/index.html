@@ -18,7 +18,7 @@
         <a class="brand" href="../index.html" aria-label="Summit Creative Studio home"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">Summit <em>Studio</em></span></a>
         <input class="nav-toggle" type="checkbox" id="nav-toggle" />
         <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
-        <nav class="site-nav" aria-label="Primary navigation"><a href="../index.html#services">Services</a><a href="../index.html#work">Selected work</a><a class="nav-current" href="index.html">Journal</a><a href="../index.html#about">About</a><a class="nav-cta" href="../index.html#contact">Start a project <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></nav>
+        <nav class="site-nav" aria-label="Primary navigation"><a href="../index.html#services">Services</a><a href="../index.html#work">Selected work</a><a class="nav-current" href="index.html">Journal</a><a class="nav-admin" href="../admin/index.html">Admin</a><a href="../index.html#about">About</a><a class="nav-cta" href="../index.html#contact">Start a project <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></nav>
       </div>
     </header>
 
@@ -34,12 +34,12 @@
       <section class="journal-featured section">
         <div class="container">
           <div class="section-topline"><p class="eyebrow dark-eyebrow">Featured note</p><span class="section-index">01 / 03</span></div>
-          <article class="journal-featured-card">
+          <article class="journal-featured-card" data-article-card="clarity-is-a-design-decision">
             <a class="journal-featured-image" href="clarity-is-a-design-decision.html"><img src="../image/landing.jpg" alt="Mountain range for Clarity Is a Design Decision" /></a>
             <div class="journal-featured-copy">
-              <div class="journal-card-meta"><span>Perspective</span><span>06 min read · 13 Aug 2026</span></div>
-              <h2><a href="clarity-is-a-design-decision.html">Clarity is a design decision, not a finishing touch.</a></h2>
-              <p>Most design problems do not begin on the screen. They begin when a team has not yet agreed on what matters. Here is how we use clarity as a practical creative tool.</p>
+              <div class="journal-card-meta"><span data-article-category>Perspective</span><span data-article-meta>06 min read · 13 Aug 2026</span></div>
+              <h2><a data-article-title href="clarity-is-a-design-decision.html">Clarity is a design decision, not a finishing touch.</a></h2>
+              <p data-article-summary>Most design problems do not begin on the screen. They begin when a team has not yet agreed on what matters. Here is how we use clarity as a practical creative tool.</p>
               <a class="button-link" href="clarity-is-a-design-decision.html">Read the note <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
@@ -50,18 +50,18 @@
         <div class="container">
           <div class="section-topline"><p class="eyebrow dark-eyebrow">More from Summit</p><span class="section-index">Archive</span></div>
           <div class="journal-archive-grid">
-            <article class="journal-archive-card">
+            <article class="journal-archive-card" data-article-card="systems-that-leave-room">
               <a class="journal-archive-image journal-archive-image-notebook" href="systems-that-leave-room.html"><img src="../image/M2.jpg" alt="Hand-drawn pattern studies for the article Build Systems That Leave Room for Surprise" /></a>
-              <div class="journal-card-meta"><span>Process</span><span>04 min read · 06 Aug 2026</span></div>
-              <h2><a href="systems-that-leave-room.html">Build systems that leave room for surprise.</a></h2>
-              <p>Structure should help the work travel further, not squeeze the life out of it.</p>
+              <div class="journal-card-meta"><span data-article-category>Process</span><span data-article-meta>04 min read · 06 Aug 2026</span></div>
+              <h2><a data-article-title href="systems-that-leave-room.html">Build systems that leave room for surprise.</a></h2>
+              <p data-article-summary>Structure should help the work travel further, not squeeze the life out of it.</p>
               <a class="journal-inline-link" href="systems-that-leave-room.html">Read note <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </article>
-            <article class="journal-archive-card">
+            <article class="journal-archive-card" data-article-card="the-case-for-a-point-of-view">
               <a class="journal-archive-image journal-archive-image-notebook" href="the-case-for-a-point-of-view.html"><img src="../image/M.jpg" alt="Hand-drawn lettering study for the article The Case for a Point of View" /></a>
-              <div class="journal-card-meta"><span>Field note</span><span>05 min read · 29 Jul 2026</span></div>
-              <h2><a href="the-case-for-a-point-of-view.html">The case for a point of view in every project.</a></h2>
-              <p>Better work begins when a team is willing to make a choice — and stand for it.</p>
+              <div class="journal-card-meta"><span data-article-category>Field note</span><span data-article-meta>05 min read · 29 Jul 2026</span></div>
+              <h2><a data-article-title href="the-case-for-a-point-of-view.html">The case for a point of view in every project.</a></h2>
+              <p data-article-summary>Better work begins when a team is willing to make a choice — and stand for it.</p>
               <a class="journal-inline-link" href="the-case-for-a-point-of-view.html">Read note <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </article>
           </div>
@@ -79,6 +79,7 @@
     </main>
 
     <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="../index.html"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name">Summit <em>Studio</em></span></a><p>© 2026 Summit Creative Studio. Built with intention.</p><a class="back-to-top" href="#journal-top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
+    <script src="../scripts/article-data.js" defer></script>
     <script src="../scripts/motion.js" defer></script>
   </body>
 </html>

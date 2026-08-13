@@ -93,6 +93,12 @@ The first submission to the configured recipient may require a one-time confirma
 
 Each Journal article includes an interactive comments area powered by `scripts/comments.js`. Visitors can add a name and comment, see the comment count update, remove comments from the same browser, and receive clear success or error feedback. Because the site is deployed on GitHub Pages without a database or server, comments are stored in the visitor’s local browser using `localStorage`; they are not shared between visitors or devices. A hosted database or comments provider can be connected later if public cross-device discussion is required.
 
+## Admin panel
+
+The local admin workspace lives at `admin/index.html` and is also available from the Journal navigation. It provides article counts, published and draft status, local metadata editing for titles, categories, reading times, dates, and summaries, plus filtering and removal of comments. The panel also includes reset controls for local article edits and comments.
+
+Because this project is a static GitHub Pages site, the Admin Panel is a browser-only workspace with no authentication, server, database, or cross-device synchronization. It is suitable for a local prototype and content preview. A production editorial workflow should move the data and authentication to a backend such as a hosted database or CMS before exposing sensitive publishing controls.
+
 ## License
 
 This project is released under the license included in the repository.
