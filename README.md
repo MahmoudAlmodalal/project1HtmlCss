@@ -12,6 +12,7 @@ The page is structured as a modern creative-studio landing experience with:
 - A concise studio statement that establishes the brand point of view.
 - Service cards for brand strategy, visual identity, and digital experiences.
 - A selected-work grid with responsive image treatments and hover states.
+- Three linked case-study pages for Northstar, Meridian, and Field Notes.
 - An about section that combines studio positioning with a visual story.
 - A high-contrast contact section with direct email and social links.
 
@@ -29,6 +30,10 @@ The page is structured as a modern creative-studio landing experience with:
 ```text
 .
 ├── index.html
+├── projects/
+│   ├── northstar.html
+│   ├── meridian.html
+│   └── field-notes.html
 ├── image/
 │   ├── landing.jpg
 │   ├── logo.jpg
@@ -68,7 +73,7 @@ The CSS includes a reduced-motion preference to keep non-essential transitions r
 
 ## Customization
 
-To adapt the page for a real studio or portfolio, update the content in `index.html`, replace the images inside `image/`, and adjust the design tokens at the top of `styles/style.css`. The navigation links currently point to sections on the same page, while portfolio cards use the contact section as a clear placeholder for future case-study pages.
+To adapt the site for a real studio or portfolio, update the content in `index.html`, replace the images inside `image/`, and adjust the design tokens at the top of `styles/style.css`. Each project card now links to a standalone case-study page inside `projects/`. Those pages share the global design system and include a challenge, approach, outcome, and next-project navigation pattern. Duplicate one of the existing case-study files when adding a new project, then update its metadata, copy, imagery, and links.
 
 ## License
 
