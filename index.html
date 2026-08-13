@@ -1,165 +1,230 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/all.min.css">
-      <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="styles/Normalize.css">
-  <title>Hello, World!</title>
-</head>
-<body>
-  <div class = "header">
-    <div class="container">
-      <img class="logo" src="image\logo.jpg" alt="">
-       <div class="link">
-      <span class="icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      <ul>
-        <li><a href="#Serves">Service</a></li>
-        <li><a href="#Protofolio">Protofolio</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
-    </div>
-    </div>
-  </div>
-  <div class="landing">
-    <div class="intro-text">
-      <h1>Hello There</h1>
-      <p>We are leon - Super Creative & Minimal Agency Web Templete</p>
-    </div>
-  </div>
-  <div class="feature">
-    <div class="container">
-      <div class="feat">
-        <i class="fas fa-magic fa-3x"></i>
-        <h3>Tell Us Your Idea</h3>
-        <p>Lorun ther are lorem is the combuter rbhd is fast conction of databacs is the lorum</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Summit Creative Studio builds thoughtful brands, digital experiences, and websites for ambitious teams."
+    />
+    <meta name="theme-color" content="#0e1a1b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/Normalize.css" />
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Summit Creative Studio — Ideas with altitude</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Summit Creative Studio home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-name">Summit <em>Studio</em></span>
+        </a>
+
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#work">Selected work</a>
+          <a href="#about">About</a>
+          <a class="nav-cta" href="#contact">Start a project <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+        </nav>
       </div>
-      <div class="feat">
-        <i class="far fa-gem fa-3x"></i>
-        <h3>We Will Do All The Work</h3>
-        <p>Lorun ther are lorem is the combuter rbhd is fast conction of databacs is the lorum</p>
-      </div>
-      <div class="feat">
-        <i class="fas fa-globe-asia fa-3x"></i>
-        <h3>Your Project is Worldwide</h3>
-        <p>Lorun ther are lorem is the combuter rbhd is fast conction of databacs is the lorum</p>
-      </div>
-    </div>
-  </div>
-  <div class="service" id="Serves">
-    <div class="container">
-      <h2 class="special-heading">Services</h2>
-      <p>Don't be busy, by productive</p>
-      <div class="service-content">
-        <dev class="col">
-          <div class="srv">
-            <i class="fab fa-palette fa-2px"></i>
-            <div class="text">
-              <h3>Graphic Design</h3>
-              <p>Graphic desgn is important for wep design in islamic universirt and in the word is true</p>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+          <p class="eyebrow"><span></span> Independent creative studio · Est. 2021</p>
+          <h1 id="hero-title">Make your next<br /><strong>move memorable.</strong></h1>
+          <div class="hero-bottom">
+            <p class="hero-copy">
+              We shape clear brands and digital experiences for people building what comes next.
+            </p>
+            <a class="circle-link" href="#work" aria-label="Explore selected work">
+              <i class="fas fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-note" aria-hidden="true">Scroll to explore <span>↓</span></div>
+      </section>
+
+      <section class="intro-band" aria-label="Studio statement">
+        <div class="container intro-grid">
+          <p class="eyebrow dark-eyebrow">A little about us</p>
+          <p class="intro-statement">
+            Good design should feel inevitable — simple to understand, hard to forget, and built to move with your ambition.
+          </p>
+          <div class="intro-meta">
+            <span>01</span>
+            <span>Strategy · Identity · Digital</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-topline">
+            <p class="eyebrow">What we do</p>
+            <span class="section-index">01 / 03</span>
+          </div>
+          <div class="section-heading-row">
+            <h2 id="services-title">Clarity for<br /><em>complex ideas.</em></h2>
+            <p class="section-lead">
+              From first thought to final pixel, we bring structure, character, and momentum to your most important ideas.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card service-card-featured">
+              <div class="card-number">01</div>
+              <i class="fas fa-compass service-icon" aria-hidden="true"></i>
+              <h3>Brand strategy</h3>
+              <p>Positioning, verbal identity, and a clear point of view that gives your brand somewhere to go.</p>
+              <a class="text-link" href="#contact">Explore strategy <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+            <article class="service-card">
+              <div class="card-number">02</div>
+              <i class="fas fa-gem service-icon" aria-hidden="true"></i>
+              <h3>Visual identity</h3>
+              <p>Distinctive systems that make every touchpoint feel unmistakably like you.</p>
+              <a class="text-link" href="#contact">Shape your identity <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+            <article class="service-card">
+              <div class="card-number">03</div>
+              <i class="fas fa-desktop service-icon" aria-hidden="true"></i>
+              <h3>Digital experiences</h3>
+              <p>Websites and interfaces that turn attention into understanding, action, and growth.</p>
+              <a class="text-link" href="#contact">Build your experience <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section section-muted" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <div class="section-topline">
+            <p class="eyebrow">Selected work</p>
+            <span class="section-index">02 / 03</span>
+          </div>
+          <div class="section-heading-row">
+            <h2 id="work-title">A few things<br /><em>we’re proud of.</em></h2>
+            <p class="section-lead">A small selection of identities and digital worlds built with ambitious partners.</p>
+          </div>
+
+          <div class="work-grid">
+            <article class="project-card project-card-large">
+              <a href="#contact" class="project-image" aria-label="View Northstar project case study">
+                <img src="image/photo1.png" alt="Abstract visual from the Northstar project" />
+                <span class="project-arrow"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+              </a>
+              <div class="project-info">
+                <div>
+                  <h3>Northstar</h3>
+                  <p>Brand identity · Digital platform</p>
+                </div>
+                <span class="project-year">2024</span>
+              </div>
+            </article>
+            <article class="project-card">
+              <a href="#contact" class="project-image project-image-dark" aria-label="View Meridian project case study">
+                <img src="image/main.png" alt="Editorial visual from the Meridian project" />
+                <span class="project-arrow"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+              </a>
+              <div class="project-info">
+                <div>
+                  <h3>Meridian</h3>
+                  <p>Art direction · Web design</p>
+                </div>
+                <span class="project-year">2023</span>
+              </div>
+            </article>
+            <article class="project-card project-card-offset">
+              <a href="#contact" class="project-image" aria-label="View Field Notes project case study">
+                <img src="image/logo.jpg" alt="Graphic mark from the Field Notes project" />
+                <span class="project-arrow"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+              </a>
+              <div class="project-info">
+                <div>
+                  <h3>Field Notes</h3>
+                  <p>Editorial system · Campaign</p>
+                </div>
+                <span class="project-year">2022</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-visual">
+            <div class="about-image-wrap">
+              <img src="image/landing.jpg" alt="Mountain range at sunrise" />
+            </div>
+            <p class="vertical-label">Stay curious · Keep climbing</p>
+          </div>
+          <div class="about-copy">
+            <div class="section-topline">
+              <p class="eyebrow">The studio</p>
+              <span class="section-index">03 / 03</span>
+            </div>
+            <h2 id="about-title">Small team.<br /><em>Big perspective.</em></h2>
+            <p class="about-lead">
+              Summit is an independent design studio for teams with something meaningful to say. We combine sharp thinking with warm, human design to make brands that earn attention and hold it.
+            </p>
+            <div class="about-details">
+              <div>
+                <span class="detail-label">Based in</span>
+                <strong>Amman · Working globally</strong>
+              </div>
+              <div>
+                <span class="detail-label">Good at</span>
+                <strong>Finding the signal in the noise</strong>
+              </div>
+            </div>
+            <a class="button-link" href="#contact">More about Summit <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <p class="eyebrow">Have a good one?</p>
+          <h2 id="contact-title">Let’s make it<br /><em>worth talking about.</em></h2>
+          <p class="contact-copy">Tell us what you’re building, where you’re stuck, or what you’re dreaming up.</p>
+          <a class="contact-email" href="mailto:mahmoudAlmoudalal@gmail.com">mahmoudAlmoudalal@gmail.com <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+          <div class="contact-footer">
+            <span>Available for selected projects</span>
+            <div class="social-links" aria-label="Social links">
+              <a href="https://github.com/MahmoudAlmodalal" target="_blank" rel="noreferrer" aria-label="Summit Studio on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="mailto:mahmoudAlmoudalal@gmail.com" aria-label="Email Summit Studio"><i class="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
           </div>
-          <div class="srv">
-            <i class="fas fa-sketch fa-2px"></i>
-            <div class="text">
-              <h3>Ui & Ux</h3>
-              <p>Ui & Ux desgn is important for wep design in islamic universirt and in the word is true</p>
-            </div>
-          </div>
-        </dev>
-        <dev class="col">
-          <div class="srv">
-            <i class="fas fa-vector-square fa-2px"></i>
-            <div class="text">
-              <h3>Web Design</h3>
-              <p>Web Design is important for wep design in islamic universirt and in the word is true</p>
-            </div>
-          </div>
-          <div class="srv">
-            <i class="fas fa-pencil-ruler fa-2px"></i>
-            <div class="text">
-              <h3>Web Development</h3>
-              <p>Web Development Ui & Ux desgn is important for wep design in islamic universirt and in the word is true</p>
-            </div>
-          </div>
-        </dev>
-        <div class="col">
-          <div class="image">
-            <img src="image/main.png" alt="">
-          </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand brand-footer" href="#top" aria-label="Back to Summit Creative Studio home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-name">Summit <em>Studio</em></span>
+        </a>
+        <p>© 2026 Summit Creative Studio. Built with intention.</p>
+        <a class="back-to-top" href="#top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
       </div>
-    </div>
-  </div>
-  <div class="portfolio" id="Protofolio">
-    <div class="container">
-      <h2 class="special-heading">portfolio</h2>
-      <p>If you do it right, it will last for ever.</p>
-      <div class="portfolio-content">
-       <div class="card">
-          <img src="image/photo1.png" alt="">
-          <dev class="info">
-            <h3>Project here</h3>
-            <p>Web Development Ui & Ux desgn is important for wep design in islamic universirt and in the word is true</p>
-          </dev>
-        </div>
-        <div class="card">
-          <img src="image/photo1.png" alt="">
-          <dev class="info">
-            <h3>Project here</h3>
-            <p>Web Development Ui & Ux desgn is important for wep design in islamic universirt and in the word is true</p>
-          </dev>
-        </div>
-        <div class="card">
-          <img src="image/photo1.png" alt="">
-          <dev class="info">
-            <h3>Project here</h3>
-            <p>Web Development Ui & Ux desgn is important for wep design in islamic universirt and in the word is true </p>
-          </dev>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="about" id="About">
-    <div class="container">
-      <h2 class="special-heading">About</h2>
-      <p>Less is more work.</p>
-      <div class="about-content">
-        <div class="image">
-          <img src="image/logo.jpg">
-        </div>
-        <div class="text">
-          <p>Web Development Ui & Ux desgn is important for wep design in islamic universirt and in the word is true</p>
-          <hr>
-          <p>Web Development Ui & Ux desgn is important for wep design in islamic universirt and in the word is true</p>
-        </div>
-      </div>
-    </div>
-  </div>
-   <div class="contact" id="Contact">
-    <div class="container">
-      <h2 class="special-heading">Contact</h2>
-      <p>we are born to create.</p>
-      <div class="info">
-        <p class="label">Feel free to drop us a line at:</p>
-        <a href="mailto:mal" class="link">mahmoudAlmoudalal@gmail.com</a>
-        <div class="social">
-          <p>Find us in social</p>
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer">
-    &copy; 2021 <span>Leon</span> All Right Reserved
-  </div>
-</body>
+    </footer>
+  </body>
 </html>
