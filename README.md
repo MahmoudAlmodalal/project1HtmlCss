@@ -13,6 +13,7 @@ The page is structured as a modern creative-studio landing experience with:
 - Service cards for brand strategy, visual identity, and digital experiences.
 - A selected-work grid with responsive image treatments and hover states.
 - Three linked case-study pages for Northstar, Meridian, and Field Notes.
+- A Journal section on the home page, a dedicated journal archive, and three long-form articles.
 - An about section that combines studio positioning with a visual story.
 - A high-contrast contact section with direct email and social links.
 
@@ -34,6 +35,11 @@ The page is structured as a modern creative-studio landing experience with:
 │   ├── northstar.html
 │   ├── meridian.html
 │   └── field-notes.html
+├── journal/
+│   ├── index.html
+│   ├── clarity-is-a-design-decision.html
+│   ├── systems-that-leave-room.html
+│   └── the-case-for-a-point-of-view.html
 ├── image/
 │   ├── landing.jpg
 │   ├── logo.jpg
@@ -74,6 +80,8 @@ The CSS includes a reduced-motion preference to keep non-essential transitions r
 ## Customization
 
 To adapt the site for a real studio or portfolio, update the content in `index.html`, replace the images inside `image/`, and adjust the design tokens at the top of `styles/style.css`. Each project card now links to a standalone case-study page inside `projects/`. Those pages share the global design system and include a challenge, approach, outcome, and next-project navigation pattern. Duplicate one of the existing case-study files when adding a new project, then update its metadata, copy, imagery, and links.
+
+The Journal lives in `journal/`. Its archive page is `journal/index.html`, while each article uses the same reading-page structure, including metadata, a feature image, long-form content, and a next-article link. Duplicate an existing article page to publish a new note, then update its title, description, date, reading time, content, imagery, and archive link.
 
 ## License
 
